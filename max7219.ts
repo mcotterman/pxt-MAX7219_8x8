@@ -257,7 +257,7 @@ namespace max7219_matrix {
     * Print a custom character from a number array on the chain of MAX7219 matrixs at a specific spot. Each number in the array is 0-255, the decimal version of column's byte number. Offset value -8 ~ last column of matrixs. You can choose to clear the screen or not (if not it can be used to print multiple string on the MAX7219 chain).
     */
     //% block="Display custom character from|number array $customCharArray|offset $offset|clear screen first $clear" offset.min=-8 clear.defl=true group="2. Display text on matrixs" blockExternalInputs=true advanced=true
-    export function displayCustomCharacter(customCharArray: number[], offset: number, clear: boolean) {
+    export function displayCustomCharacter(customCharArray, offset: number, clear: boolean) {
         // clear screen and array if needed
         if (clear) {
             for (let i = 0; i < _displayArray.length; i++) _displayArray[i] = 0
